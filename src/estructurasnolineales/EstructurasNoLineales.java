@@ -65,7 +65,6 @@ public class EstructurasNoLineales {
             pino.Delete(25);
             pino.Delete(30);
             pino.Delete(8);
-            pino.Delete(10);
             //pino.Delete(3);
             System.out.println("");
             System.out.println("Nodos: " + pino.CountNodes());
