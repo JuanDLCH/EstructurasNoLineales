@@ -7,8 +7,7 @@ package estructurasnolineales;
 
 /**
  *
- * @author samaniw
- * Juan Diego Londoño Chavarría
+ * @author samaniw Juan Diego Londoño Chavarría
  */
 public class EstructurasNoLineales {
 
@@ -91,6 +90,63 @@ public class EstructurasNoLineales {
         System.out.println("Último nivel:");
         System.out.println(pino.LastLevel());
         //System.out.println(pino.Search(88));
+
+        System.out.println("\n\nGRAFOS:");
+
+        System.out.println("1. Retornar la ruta que permite visitar todos sus nodos: \n");
+        Graph g69 = new Graph(4);
+        g69.addEdge(0, 1);
+        g69.addEdge(0, 2);
+        g69.addEdge(0, 3);
+        g69.addEdge(1, 0);
+        g69.addEdge(2, 0);
+        g69.addEdge(3, 0);
+        System.out.println("[[1,2,3],[0],[0],[0]]");
+        System.out.println("Recorrido:");
+        g69.GraphPath();
+        //punto 2:
+        //[[false, true,  false, false],
+        //[false, false, true,  false],
+        //[true,  false, false, true ],
+        //[false, false, true,  false]]
+        System.out.println("\n\nMatriz");
+        System.out.println("[[false, true,  false, false],");
+        System.out.println("[false, false, true,  false],");
+        System.out.println("[true,  false, false, true ],");
+        System.out.println("[false, false, true,  false]]");
+        g69 = new Graph(4);
+        g69.addEdge(0, 1);
+        g69.addEdge(1, 2);
+        g69.addEdge(2, 0);
+        g69.addEdge(2, 3);
+        g69.addEdge(3, 2);
+        System.out.println("\n2. Determinar si cada nodo tiene el mismo número de entradas y salidas: ");
+        System.out.println(g69.SameInputsAndOutputs());
+        System.out.println("\n3.Retornar los arcos faltantes para conectar todos los nodos: \n");
+        System.out.println("Arcos");
+        System.out.println("[[5,3],  [4,0],  [0,1],  [6,5],  [3,4],  [0,3],  [2,0],  [2,1],  [2,6], "
+                + "\n [5,1],  [3,2],  [0,5],  [1,3],  [1,4],  [6,3]]\n");
+        g69 = new Graph(7);
+        g69.addEdge(5, 3);
+        g69.addEdge(4, 0);
+        g69.addEdge(0, 1);
+        g69.addEdge(6, 5);
+        g69.addEdge(3, 4);
+        g69.addEdge(0, 3);
+        g69.addEdge(2, 0);
+        g69.addEdge(2, 1);
+        g69.addEdge(2, 6);
+        g69.addEdge(5, 1);
+        g69.addEdge(3, 2);
+        g69.addEdge(0, 5);
+        g69.addEdge(1, 3);
+        g69.addEdge(1, 4);
+        g69.addEdge(6, 3);
+        System.out.println("Arcos faltantes");
+        g69.MissingArcs();
+
+        System.out.println("Profe perdóname las 22 horas"
+                + "de retraso, calificame el taller plis :'v");
     }
 
 }
